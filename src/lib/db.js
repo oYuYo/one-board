@@ -2,6 +2,7 @@ import Dexie from 'dexie';
 
 export const db = new Dexie('OneboardDB');
 
-db.version(1).stores({
-	boards: '++id, title, content'
+db.version(2).stores({
+	memos: '++id, title, content',
+	drawings: '++id, canvasData'
 });
